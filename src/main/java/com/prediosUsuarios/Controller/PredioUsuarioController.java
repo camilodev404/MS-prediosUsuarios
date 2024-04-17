@@ -18,7 +18,7 @@ public class PredioUsuarioController {
     @Autowired
     PredioUsuarioService predioUsuarioService;
 
-    @GetMapping
+    @GetMapping("all")
     public ResponseEntity<List<PredioUsuario>> getPrediosUsuario(){
         return new ResponseEntity<>(predioUsuarioService.getAll(), HttpStatus.OK);
     }

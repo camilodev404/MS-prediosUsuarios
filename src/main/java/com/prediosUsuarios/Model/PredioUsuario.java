@@ -40,7 +40,7 @@ public class PredioUsuario {
     @Column(name = "habitaexplota")
     private Boolean habitaExplota;
 
-    @Column(name = "fechaHabitaExplota")
+    @Column(name = "fechahabitaexplota")
     private Date fechaHabitaExplota;
 
     private String explotaciones;

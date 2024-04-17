@@ -15,7 +15,7 @@ public class Familia {
     @Column(name = "tipodocumento")
     private String tipoDocumento;
 
-    private int documento;
+    private String documento;
 
     @Column(name = "primernombre")
     private String primerNombre;
@@ -49,7 +49,7 @@ public class Familia {
     public Familia() {
     }
 
-    public Familia(String idFamiliar, String tipoDocumento, int documento, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, Date fechanacimiento, String sexo, String limitantes, String parentesco, String ocupaciones, Boolean dependeUsuario, PredioUsuarioId foranea) {
+    public Familia(String idFamiliar, String tipoDocumento, String documento, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, Date fechanacimiento, String sexo, String limitantes, String parentesco, String ocupaciones, Boolean dependeUsuario, PredioUsuarioId foranea) {
         this.idFamiliar = idFamiliar;
         this.tipoDocumento = tipoDocumento;
         this.documento = documento;
@@ -82,11 +82,11 @@ public class Familia {
         this.tipoDocumento = tipoDocumento;
     }
 
-    public int getDocumento() {
+    public String getDocumento() {
         return documento;
     }
 
-    public void setDocumento(int documento) {
+    public void setDocumento(String documento) {
         this.documento = documento;
     }
 
