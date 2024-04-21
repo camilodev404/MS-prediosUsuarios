@@ -1,6 +1,8 @@
 package com.prediosUsuarios.Controller;
 
 import com.prediosUsuarios.Model.Familia;
+import com.prediosUsuarios.Model.PredioUsuario;
+import com.prediosUsuarios.Model.PredioUsuarioId;
 import com.prediosUsuarios.Service.FamiliaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,11 @@ public class FamiliaController {
     @GetMapping("/{idFamiliar}")
     public ResponseEntity<Familia> getFamiliarById(@PathVariable("idFamiliar") String idFamiliar){
         return familiaService.getById(idFamiliar).map(familiar -> new ResponseEntity<>(familiar, HttpStatus.OK)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @GetMapping("/cedula/{cedula}/{idPredio}")
+    public ResponseEntity<List<Familia>> getFamiliarByCed(@PathVariable String cedula, @PathVariable String idPredio) {
+        return new ResponseEntity<>(familiaService.getByCed(cedula, idPredio), HttpStatus.OK);
     }
 
     @PostMapping("/save")

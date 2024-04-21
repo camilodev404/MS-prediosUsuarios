@@ -18,6 +18,10 @@ public class FamiliaService {
         return familiaRepository.findAll();
     }
 
+    public List<Familia> getByCed(String cedula, String idPredio) {
+        return familiaRepository.findByCedulaAndIdPredio(cedula, idPredio);
+    }
+
     public Optional<Familia> getById(String idFamiliar){
         return familiaRepository.findById(idFamiliar);
     }
