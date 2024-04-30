@@ -4,6 +4,7 @@ import com.prediosUsuarios.Model.Familia;
 import com.prediosUsuarios.Model.PredioUsuario;
 import com.prediosUsuarios.Model.PredioUsuarioId;
 import com.prediosUsuarios.Service.FamiliaService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/familia")
 @CrossOrigin("*")
+@Tag(name = "Familiares")
 public class FamiliaController {
 
     @Autowired
