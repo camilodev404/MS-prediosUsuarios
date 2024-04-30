@@ -3,6 +3,7 @@ package com.prediosUsuarios.Controller;
 import com.prediosUsuarios.Model.PredioUsuario;
 import com.prediosUsuarios.Model.PredioUsuarioId;
 import com.prediosUsuarios.Service.PredioUsuarioService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/prediousuario")
 @CrossOrigin("*")
+@Tag(name = "PrediosUsuarios")
 public class PredioUsuarioController {
 
     @Autowired
